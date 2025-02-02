@@ -7,4 +7,7 @@ SELECT
     PRIMARY KEY
     FOREIGN KEY
 FROM
-    Books;
+    Books.COLUMNS
+WHERE
+    TABLE_SCHEMA = alx_book_store()
+    AND TABLE_NAME = 'books';
