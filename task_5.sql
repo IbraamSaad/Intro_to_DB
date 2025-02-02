@@ -7,4 +7,4 @@ VALUES (
     1, 'Cole Baidoo', 'cbaidoo@sandtech.com', '123 Happiness Ave.'
     );
 
-SELECT * FROM customer WHERE customer_id = 1; 
+SELECT * FROM Customer WHERE customer_id = 1; 
