@@ -1,11 +1,14 @@
-SELECT 
-    b.book_id, b.title, b.author_id, b.price, b.publication_date, c.COLUMN_NAME
+USE alx_book_store;
+
+SELECT
+    COLUMN_NAME,
+    DATA_TYPE,
+    IS_NULLABLE,
+    COLUMN_KEY,
+    COLUMN_DEFAULT,
+    EXTRA
 FROM
-    books b
-JOIN
-    INFORMATION_SCHEMA.COLUMNS c
-ON
-    b.book_id = c.COLUMN_NAME
+    INFORMATION_SCHEMA.COLUMNS
 WHERE
-    c.TABLE_SCHEMA = 'alx_book_store'
-    AND c.TABLE_NAME = 'books';
+    TABLE_NAME = 'Books'
+    AND TABLE_SCHEMA = DATABASE();
