@@ -2,7 +2,7 @@ USE alx_book_store;
 
 SELECT
     COLUMN_NAME,
-    DATA_TYPE,
+    DATA_TYPE AS COLUMN_TYPE,
     IS_NULLABLE,
     COLUMN_KEY,
     COLUMN_DEFAULT,
