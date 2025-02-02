@@ -1,13 +1,11 @@
-USE alx_book_store;
-
 SELECT 
-    book_id, title, author_id, price, publication_date
-    INT, VARCHAR, INT, DOUBLE, DATE
-    NOT NULL, NULL, NULL, NULL, NULL
-    PRIMARY KEY
-    FOREIGN KEY
+    b.book_id, b.title, b.author_id, b.price, b.publication_date, c.COLUMN_NAME
 FROM
-    Books.COLUMNS
+    books b
+JOIN
+    INFORMATION_SCHEMA.COLUMNS c
+ON
+    b.book_id = c.COLUMN_NAME
 WHERE
-    TABLE_SCHEMA = alx_book_store()
-    AND TABLE_NAME = 'books';
+    c.TABLE_SCHEMA = 'alx_book_store'
+    AND c.TABLE_NAME = 'books';
